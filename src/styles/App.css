@@ -29,7 +29,7 @@
 }
 
 .title {
-    margin-top: 3rem;
+    margin-top: 2rem;
 }
 
 .wrapper {
@@ -44,12 +44,29 @@
 .more-info {
     border-bottom: .3rem solid gray;
 }
-form {
-    padding: 2rem 10rem;
-}
+
 button {
     background-color: cadetblue;
-    padding: 1rem;
-    border-radius: 1rem;
-    font-size: 2rem;
+    padding: .5rem 1rem;
+    border-radius: .5rem;
+    font-size: 1.5rem;
+}
+@media only screen and (max-width: 600px) {
+    .main {
+        margin: 1rem;
+        max-width: 300px;
+    }
+    .App-logo {
+        height: 20vmin;
+    }
+    .App-header {
+        font-size: 0.9rem;
+    }
+    .title {
+        margin-top: 0;
+        font-size: 1rem;
+    }
+    form {
+        padding: 0;
+    }
 }

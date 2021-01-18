@@ -6,9 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.heading-more-info {
-  text-align: center;
-  }
+
 .wrapper {
   padding: 5px 20px;
 }
