@@ -7,10 +7,10 @@ const Header = () => {
             <div className="logo-nav">
                 <ul className="list">
                     <li className="item">
-                        <button >Home</button>
+                        <a >Home</a>
                     </li>
                     <li className="item">
-                        <button>Data</button>
+                        <a>Data</a>
                     </li>
                 </ul>
             </div>

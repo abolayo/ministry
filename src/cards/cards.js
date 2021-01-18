@@ -1,5 +1,5 @@
 import logo from '../nigeria.jpg';
-import '../App.css';
+import '../styles/App.css';
 import React, {useState} from 'react';
 //import DataPage from "./DataPage";
 
@@ -16,16 +16,12 @@ function Cards() {
     const linkName = readMore ? 'Less info << ' : 'More info >> '
     return (
         <div className="App">
-            <header className="App-header">
-                <h1>
-                    Ministry and Federal Parastatals
-                </h1>
-            </header>
+
             <body>
             <div className="logo-title">
                 <img src={logo} className="App-logo" alt="logo"/>
                 <h2 className="title">
-                    Ministry of Justics
+                    Ministry of Justice
                 </h2>
             </div>
             <div>
@@ -33,7 +29,7 @@ function Cards() {
                 <p>Address:</p>
                 <p>
                     Federal Ministry of Justice
-                    Federal Secretatriat Towers (5th & 10th floors), Shehu Shagari Way Central Area, Abuja.
+                    Federal Secretariat Towers (5th & 10th floors), Shehu Shagari Way Central Area, Abuja.
                     Federal Capital Territory, Nigeria.
                     <p>Web: <a
                         className="App-link"

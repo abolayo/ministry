@@ -1,6 +1,6 @@
 import React from 'react';
-import './App.css';
-import './index.css';
+import './styles/App.css';
+import './styles/index.css';
 
 class DataPage extends React.Component {
     constructor(props) {
@@ -73,6 +73,7 @@ class DataPage extends React.Component {
                             <input
                                 type='text'
                                 name='name'
+                                className="field"
                                 value={this.state.name}
                                 onChange={this.myChangeHandler}
                             />
@@ -82,6 +83,7 @@ class DataPage extends React.Component {
                             <input
                                 type='text'
                                 name='minister'
+                                className="field"
                                 value={this.state.minister}
                                 onChange={this.myChangeHandler}
                             />
@@ -90,6 +92,7 @@ class DataPage extends React.Component {
                             <p>Origin</p>
                             <input
                                 type='text'
+                                className="field"
                                 name='origin'
                                 value={this.state.origin}
                                 onChange={this.myChangeHandler}
@@ -99,6 +102,7 @@ class DataPage extends React.Component {
                             <p>Address</p>
                             <input
                                 type='text'
+                                className="field"
                                 name='address'
                                 value={this.state.address}
                                 onChange={this.myChangeHandler}
@@ -107,6 +111,7 @@ class DataPage extends React.Component {
                         <label>
                             <p>Website</p>
                             <input
+                                className="field"
                                 type='text'
                                 name='website'
                                 value={this.state.website}
@@ -116,6 +121,7 @@ class DataPage extends React.Component {
                         <label>
                             <p>More Information</p>
                             <textarea name="moreInfo"
+                                      className="field"
                                       value={this.state.moreInfo}
                                       onChange={this.myChangeHandler}
                             />

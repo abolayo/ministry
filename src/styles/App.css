@@ -1,7 +1,6 @@
 .App {
     text-align: left;
     margin: 5rem 20rem 5rem 10rem;
-    padding-right: 15rem;
 }
 
 .App-logo {
@@ -42,7 +41,15 @@
     text-align: center;
     color: #282c34;
 }
+.more-info {
+    border-bottom: .3rem solid gray;
+}
 form {
-    padding: 2rem;
-
+    padding: 2rem 10rem;
+}
+button {
+    background-color: cadetblue;
+    padding: 1rem;
+    border-radius: 1rem;
+    font-size: 2rem;
 }
