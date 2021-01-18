@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import './index.css';
 
 class DataPage extends React.Component {
     constructor(props) {
@@ -36,13 +37,24 @@ class DataPage extends React.Component {
 
 
     onSubmit = (e) => {
-        let {bookname, author} = this.state;
+        let {
+            name,
+            minister,
+            origin,
+            address,
+            website,
+            moreInfo
+        } = this.state;
         fetch('localhost:3000/add_book', {
             method: 'post',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
-                bookname: bookname,
-                author: author,
+                name: name,
+                minister: minister,
+                origin: origin,
+                address: address,
+                website: website,
+                moreInfo: moreInfo,
 
             })
         }).then(response => response.json()).then(data => {
@@ -116,5 +128,4 @@ class DataPage extends React.Component {
     }
 
 }
-
 export default DataPage;
