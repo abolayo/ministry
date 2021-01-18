@@ -1,6 +1,5 @@
 import React from 'react';
 import './App.css';
-import {Redirect} from 'react-router-dom';
 
 class DataPage extends React.Component {
     constructor(props) {

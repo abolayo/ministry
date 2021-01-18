@@ -1,5 +1,5 @@
 import './App.css';
-import Cards from "./cards";
+import Cards from "./cards/cards";
 import Header from "./NavbarPage";
 import DataPage from "./DataPage";
 import React from "react";
