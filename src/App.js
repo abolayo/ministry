@@ -1,25 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import Cards from "./cards";
+import Header from "./NavbarPage";
+import DataPage from "./DataPage";
+import React from "react";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    return (
+
+        <div className="main">
+            <Header/>
+            <header className="App-header">
+                <h1>
+                    Ministry and Federal Parastatals
+                </h1>
+            </header>
+            <Cards/>
+            <DataPage id="data" />
+        </div>
+    );
 }
 
 export default App;
