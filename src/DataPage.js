@@ -89,7 +89,7 @@ class DataPage extends React.Component {
                                 name='name'
                                 className="field"
                                 value={this.state.name}
-                                //onChange={(e) =>this.myChangeHandler({name: e.target.value})}
+                                onChange={(e) =>this.myChangeHandler({name: e.target.value})}
                                 //onChange={(e) => this.handleChange({ notes: e.target.value })}
                             />
                         </label>
