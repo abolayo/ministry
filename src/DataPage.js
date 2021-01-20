@@ -13,6 +13,19 @@ class DataPage extends React.Component {
             website: '',
             moreInfo: ''
         };
+        this.create = this.create.bind(this);
+        this.myChangeHandler = this.myChangeHandler.bind(this);
+    }
+
+    componentDidMount() {
+        // get all entities - GET
+
+    }
+
+    create(e) {
+        // add entity - POST
+        e.preventDefault();
+
     }
 
     myChangeHandler = (event) => {
@@ -21,20 +34,19 @@ class DataPage extends React.Component {
         if (fieldName === 'name') {
             this.setState({name: fieldValue})
         } else if (fieldName === 'minister') {
-            this.setState({name: fieldValue})
+            this.setState({minister: fieldValue})
         } else if (fieldName === 'minister') {
-            this.setState({name: fieldValue})
+            this.setState({minister: fieldValue})
         } else if (fieldName === 'origin') {
-            this.setState({name: fieldValue})
+            this.setState({origin: fieldValue})
         } else if (fieldName === 'address') {
-            this.setState({name: fieldValue})
+            this.setState({address: fieldValue})
         } else if (fieldName === 'website') {
-            this.setState({name: fieldValue})
+            this.setState({website: fieldValue})
         } else if (fieldName === 'moreInfo') {
-            this.setState({name: fieldValue})
+            this.setState({moreInfo: fieldValue})
         }
     }
-
 
     onSubmit = (e) => {
         let {
@@ -77,7 +89,8 @@ class DataPage extends React.Component {
                                 name='name'
                                 className="field"
                                 value={this.state.name}
-                                onChange={this.myChangeHandler}
+                                //onChange={(e) =>this.myChangeHandler({name: e.target.value})}
+                                //onChange={(e) => this.handleChange({ notes: e.target.value })}
                             />
                         </label>
                         <label>
@@ -118,6 +131,7 @@ class DataPage extends React.Component {
                                 name='website'
                                 value={this.state.website}
                                 onChange={this.myChangeHandler}
+                                required
                             />
                         </label>
                         <label>
