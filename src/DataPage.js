@@ -45,7 +45,7 @@ class DataPage extends React.Component {
             website,
             moreInfo
         } = this.state;
-        fetch('localhost:3000/add_book', {
+        fetch('localhost:3000/add_info', {
             method: 'post',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
@@ -65,8 +65,10 @@ class DataPage extends React.Component {
     render() {
         return (
             <div className="wrapper">
+                <div className="row justify-content-center">
+                    <div className="col-md-8">
                 <h1 className="heading-more-info">Include More Information</h1>
-                <form className="form">
+                <form className="d-flex flex-column">
                     <fieldset>
                         <label>
                             <p>Name</p>
@@ -129,6 +131,8 @@ class DataPage extends React.Component {
                     </fieldset>
                     <button onClick={this.onSubmit}>Submit</button>
                 </form>
+            </div>
+                </div>
             </div>
         )
     }
