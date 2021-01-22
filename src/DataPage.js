@@ -3,9 +3,7 @@ import './styles/App.css';
 import './styles/index.css';
 
 class DataPage extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
+   state = {
             name: '',
             minister: '',
             origin: '',
@@ -15,7 +13,7 @@ class DataPage extends React.Component {
         };
        // this.create = this.create.bind(this);
         //this.myChangeHandler = this.myChangeHandler.bind(this);
-    }
+
 
  /*   componentDidMount() {
         // get all entities - GET
@@ -28,7 +26,7 @@ class DataPage extends React.Component {
 
     }*/
 
-    myChangeHandler = (event) => {
+   /* myChangeHandler = (event) => {
         let fieldName = event.target.name;
         let fieldValue = event.target.value;
         if (fieldName === 'name') {
@@ -46,7 +44,7 @@ class DataPage extends React.Component {
         } else if (fieldName === 'moreInfo') {
             this.setState({moreInfo: fieldValue})
         }
-    }
+    }*/
 
    /* onSubmit = (e) => {
         let {
@@ -74,7 +72,7 @@ class DataPage extends React.Component {
         })
     }*/
 
-    render() {
+   /* render() {
         return (
             <div className="wrapper">
                 <div className="row justify-content-center">
@@ -149,7 +147,7 @@ class DataPage extends React.Component {
                 </div>
             </div>
         )
-    }
+    }*/
 
 }
 export default DataPage;
