@@ -25,6 +25,7 @@ class DataPage extends React.Component {
         e.preventDefault();
 
     }*/
+    }
 
    /* myChangeHandler = (event) => {
         let fieldName = event.target.name;
@@ -32,17 +33,17 @@ class DataPage extends React.Component {
         if (fieldName === 'name') {
             this.setState({name: fieldValue})
         } else if (fieldName === 'minister') {
-            this.setState({minister: fieldValue})
+            this.setState({name: fieldValue})
         } else if (fieldName === 'minister') {
-            this.setState({minister: fieldValue})
+            this.setState({name: fieldValue})
         } else if (fieldName === 'origin') {
-            this.setState({origin: fieldValue})
+            this.setState({name: fieldValue})
         } else if (fieldName === 'address') {
-            this.setState({address: fieldValue})
+            this.setState({name: fieldValue})
         } else if (fieldName === 'website') {
-            this.setState({website: fieldValue})
+            this.setState({name: fieldValue})
         } else if (fieldName === 'moreInfo') {
-            this.setState({moreInfo: fieldValue})
+            this.setState({name: fieldValue})
         }
     }*/
 
@@ -129,7 +130,6 @@ class DataPage extends React.Component {
                                 name='website'
                                 value={this.state.website}
                                 onChange={this.myChangeHandler}
-                                required
                             />
                         </label>
                         <label>
