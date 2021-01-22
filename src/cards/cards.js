@@ -1,57 +1,53 @@
 import logo from '../nigeria.jpg';
 import '../styles/App.css';
-import React, {useState} from 'react';
+import React, {Component} from 'react';
 
-//import DataPage from "./DataPage";
+class Cards extends Component {
 
-function Cards() {
+    state = {
+        name: "Abubakar Malami",
+        origin:"Kebbi",
+        ministry:"Justice",
+        address:"Federal Secretariat Towers (5th & 10th floors), Shehu Shagari Way Central Area, Abuja.\n" +
+            "                        Federal Capital Territory, Nigeria.",
+        website:"justice.gov.ng",
+        moreInfo:"Kebbi"
 
-    const [readMore, setReadMore] = useState(false);
-    const extraContent = <div>
-        <p className="extra-content">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, consectetur neque ab
-            porro quasi culpa nulla rerum quis minus voluptatibus sed hic ad quo sint, libero
-            commodi officia aliquam! Maxime.
-        </p>
-    </div>
-    const linkName = readMore ? 'Less info << ' : 'More info >> '
-    return (
-        <div className="App">
+    }
+    render() {
 
-            <body>
-            <div className="logo-title">
-                <img src={logo} className="App-logo" alt="logo"/>
-                <h2 className="title">
-                    Ministry of Justice
-                </h2>
-            </div>
-            <div>
-                <p className="name-minister">Minister: Abubakar Malami - Kebbi state</p>
-                <p>Address:</p>
-                <p>
-                    Federal Ministry of Justice
-                    Federal Secretariat Towers (5th & 10th floors), Shehu Shagari Way Central Area, Abuja.
-                    Federal Capital Territory, Nigeria.
-                    <p>Web: <a
-                        className="App-link"
-                        href="https://www.justice.gov.ng/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        www.justice.gov.ng
-                    </a>
+
+        return (
+            <div className="App">
+
+                <body>
+                <div className="logo-title">
+                    <img src={logo} className="App-logo" alt="logo"/>
+                    <h2 className="title">
+                        Ministry of {this.state.ministry}
+                    </h2>
+                </div>
+                <div>
+                    <p className="name-minister">Minister: {this.state.name} - {this.state.origin} state</p>
+                    <p>Address:</p>
+                    <p>
+                        {this.state.address}
+
+                        <p>Web: <a
+                            className="App-link"
+                            href="https://www.justice.gov.ng/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            {this.state.website}
+                        </a>
+                        </p>
+
                     </p>
-                    <div className="more-info">
-                        <a className="read-more-link" onClick={() => {
-                            setReadMore(!readMore)
-                        }}><h2>{linkName}</h2></a>
-                        {readMore && extraContent}
-                    </div>
-                </p>
+                </div>
+                </body>
             </div>
-            </body>
-        </div>
-    );
+        );
+    }
 }
-
 export default Cards;

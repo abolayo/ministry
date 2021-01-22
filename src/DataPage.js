@@ -13,11 +13,11 @@ class DataPage extends React.Component {
             website: '',
             moreInfo: ''
         };
-        this.create = this.create.bind(this);
-        this.myChangeHandler = this.myChangeHandler.bind(this);
+       // this.create = this.create.bind(this);
+        //this.myChangeHandler = this.myChangeHandler.bind(this);
     }
 
-    componentDidMount() {
+ /*   componentDidMount() {
         // get all entities - GET
 
     }
@@ -26,7 +26,7 @@ class DataPage extends React.Component {
         // add entity - POST
         e.preventDefault();
 
-    }
+    }*/
 
     myChangeHandler = (event) => {
         let fieldName = event.target.name;
@@ -48,7 +48,7 @@ class DataPage extends React.Component {
         }
     }
 
-    onSubmit = (e) => {
+   /* onSubmit = (e) => {
         let {
             name,
             minister,
@@ -57,7 +57,7 @@ class DataPage extends React.Component {
             website,
             moreInfo
         } = this.state;
-        fetch('localhost:3000/add_info', {
+        fetch('localhost:3000/sampleData', {
             method: 'post',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
@@ -72,7 +72,7 @@ class DataPage extends React.Component {
         }).then(response => response.json()).then(data => {
             window.alert(data)
         })
-    }
+    }*/
 
     render() {
         return (
@@ -89,8 +89,8 @@ class DataPage extends React.Component {
                                 name='name'
                                 className="field"
                                 value={this.state.name}
-                                onChange={(e) =>this.myChangeHandler({name: e.target.value})}
-                                //onChange={(e) => this.handleChange({ notes: e.target.value })}
+                                onChange={this.myChangeHandler}
+                                //onChange={(e) =>this.myChangeHandler({name: e.target.value})}
                             />
                         </label>
                         <label>
