@@ -25,7 +25,7 @@ class DataPage extends React.Component {
         e.preventDefault();
 
     }*/
-    }
+
 
    /* myChangeHandler = (event) => {
         let fieldName = event.target.name;
