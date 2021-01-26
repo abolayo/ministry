@@ -1,31 +1,31 @@
 import './styles/App.css';
 import Card from "./components/Card";
-import DataPage from "./DataPage";
-import React, {Component} from "react";
+import React from "react";
+import sampleData from "./components/sampleData";
 
-class App extends Component{
-   state = {
-       cards : [
-           {id: 1, value: 4},
-           {id: 2, value:10},
-           {id: 3, value: 7},
-           {id: 4, value: 9}
-       ]
-   }
-   render() {
-       return (
+function App() {
+    const CardComponents = sampleData.map(sampleData => <Card
+        key = {sampleData.id}
+        name = {sampleData.name}
+        origin = {sampleData.origin}
+        ministry = {sampleData.minister}
+        address = {sampleData.address}
+        website = {sampleData.website}
+    />)
+    console.log(CardComponents)
+    return (
+        <div className="main">
 
-           <div className="main">
-               <header className="App-header ">
-                   <h1>
-                       Ministry and Federal Parastatals
-                   </h1>
-               </header>
-               {this.state.cards.map(card => <Card
-                   key={card.id} value={card.value}/>)}
-           </div>
-       );
-   }
+            <header className="App-header ">
+                <h1>
+                    Ministry and Federal Parastatals
+                </h1>
+            </header>
+            {CardComponents}
+
+        </div>
+    )
+
 }
 
 export default App;
