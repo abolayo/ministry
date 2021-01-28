@@ -1,25 +1,31 @@
 import './styles/App.css';
-import Cards from "./cards/cards";
-import DataPage from "./DataPage";
+import Card from "./components/Card";
 import React from "react";
-import fetchData from "./fetchData";
+import sampleData from "./components/sampleData";
 
 function App() {
-
+    const CardComponents = sampleData.map(sampleData => <Card
+        key = {sampleData.id}
+        name = {sampleData.name}
+        origin = {sampleData.origin}
+        ministry = {sampleData.minister}
+        address = {sampleData.address}
+        website = {sampleData.website}
+    />)
+    console.log(CardComponents)
     return (
-
         <div className="main">
-            <header className="App-header">
+
+            <header className="App-header ">
                 <h1>
                     Ministry and Federal Parastatals
                 </h1>
             </header>
-            <Cards/>
-           <fetchData />
-            <Cards/>
-            <DataPage id="data" />
+            {CardComponents}
+
         </div>
-    );
+    )
+
 }
 
 export default App;

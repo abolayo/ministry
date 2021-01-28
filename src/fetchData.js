@@ -3,12 +3,12 @@ import React from "react";
 export default class fetchData extends React.Component {
     state = {
         loading: true,
-        person: null
+        person: "bolahi"
     }
 
 
     async componentDidMount() {
-        const url = "https://randomuser.me/api/";
+        const url = "./sampleData.json/";
         const response = await fetch(url);
         const data = await response.json();
         this.setState({person: data.results[0], loading: false})
@@ -19,10 +19,21 @@ export default class fetchData extends React.Component {
         return (
             <div>
                 {this.state.loading || !this.state.person ? <div>loading...</div> :
-                    <div>{this.state.person.name.first}</div>}
-                <div>{this.state.person.name.last}</div>
-                }
+                    <div>{this.state.person}</div>}
+
             </div>
         );
     }
 }
+/*
+ class List extends Component {
+        state = {
+            name: "Abubakar Malami",
+            origin:"Kebbi",
+            minister:"Justice",
+            address:"(5th & 10th floors)",
+            website:"justice.gov.ng",
+            moreInfo:"Kebbi"
+        }
+    }
+ */

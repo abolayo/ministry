@@ -3,9 +3,7 @@ import './styles/App.css';
 import './styles/index.css';
 
 class DataPage extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
+   state = {
             name: '',
             minister: '',
             origin: '',
@@ -13,9 +11,23 @@ class DataPage extends React.Component {
             website: '',
             moreInfo: ''
         };
+       // this.create = this.create.bind(this);
+        //this.myChangeHandler = this.myChangeHandler.bind(this);
+
+
+ /*   componentDidMount() {
+        // get all entities - GET
+
     }
 
-    myChangeHandler = (event) => {
+    create(e) {
+        // add entity - POST
+        e.preventDefault();
+
+    }*/
+
+
+   /* myChangeHandler = (event) => {
         let fieldName = event.target.name;
         let fieldValue = event.target.value;
         if (fieldName === 'name') {
@@ -33,10 +45,9 @@ class DataPage extends React.Component {
         } else if (fieldName === 'moreInfo') {
             this.setState({name: fieldValue})
         }
-    }
+    }*/
 
-
-    onSubmit = (e) => {
+   /* onSubmit = (e) => {
         let {
             name,
             minister,
@@ -45,7 +56,7 @@ class DataPage extends React.Component {
             website,
             moreInfo
         } = this.state;
-        fetch('localhost:3000/add_info', {
+        fetch('localhost:3000/sampleData', {
             method: 'post',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
@@ -60,9 +71,9 @@ class DataPage extends React.Component {
         }).then(response => response.json()).then(data => {
             window.alert(data)
         })
-    }
+    }*/
 
-    render() {
+   /* render() {
         return (
             <div className="wrapper">
                 <div className="row justify-content-center">
@@ -78,6 +89,7 @@ class DataPage extends React.Component {
                                 className="field"
                                 value={this.state.name}
                                 onChange={this.myChangeHandler}
+                                //onChange={(e) =>this.myChangeHandler({name: e.target.value})}
                             />
                         </label>
                         <label>
@@ -135,7 +147,7 @@ class DataPage extends React.Component {
                 </div>
             </div>
         )
-    }
+    }*/
 
 }
 export default DataPage;
